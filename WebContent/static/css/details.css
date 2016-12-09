@@ -1,0 +1,73 @@
+.section .panel-default > .panel-body {
+    padding-top: 0;
+}
+
+.section.details {
+    padding-top: 80px;
+}
+
+.details .col-md-12 {
+    padding: 0;
+}
+
+.details .col-md-12 > img {
+    width: 100%;
+    height: auto;
+}
+
+.details .details-content {
+    padding-left: 215px;
+}
+
+.details .details-content .details-title {
+    background: rgba(229, 229, 229, 1);
+    padding-left: 215px;
+    margin-left: -215px;
+    font-size: 20px;
+    line-height: 55px;
+}
+
+.details .details-content h4  {
+    font-size: 20px;
+    line-height: 60px;
+}
+.details .details-content {
+    font-size: 16px;
+    line-height: 40px;
+}
+.details .details-content ol {
+    margin-left: 1em;
+}
+.details .details-content .btn-register {
+    margin: 30px 0 30px 300px;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .details .details-content {
+        padding-left: 115px;
+    }
+}
+@media (max-width: 1408px) {
+    .section.details {
+        padding-top: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 685px) {
+}
+
+@media (max-width: 340px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1600px) {
+}
