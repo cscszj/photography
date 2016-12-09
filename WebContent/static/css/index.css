@@ -1,0 +1,33 @@
+.section .panel-default>.panel-body {
+  padding-top: 0;
+}
+.section.index {
+  padding-top: 80px;
+}
+/*.index .banner {*/
+  /*background-image: url("../images/banner/xiaomadongtai.png");*/
+/*}*/
+
+.index .col-md-12 {
+  padding: 0;
+}
+.index .col-md-12>img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 685px) {
+}
+@media (max-width: 340px) {
+}
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1600px) {
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <title>注册</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+  <!-- Font-awesome CSS -->
+
+  <!-- 自定义CSS -->
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+
+  <link href="static/css/common.css" rel="stylesheet"/>
+  <link href="static/css/register.css" rel="stylesheet"/>
+
+
+  <!-- Jquery Bootstrap -->
+  <script type="text/javascript" src="static/jquery/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="static/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript"
+          src="static/bootstrap/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="static/ie/html5shiv/3.7.3/html5shiv.js"></script>
+  <script type="text/javascript" src="static/ie/respond/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- 省市区 -->
+  <script type="text/javascript" src="static/js/jquery.cityselect.js"></script>
+  <script type="text/javascript" src="static/js/city.min.js"></script>
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+          <img class="navbar-brand-logo" src="images/logo.png">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="index.html">赛事浏览</a></li>
+          <li><a href="index.html">新闻动态</a></li>
+          <li><a href="index.html">我的赛事</a></li>
+          <li class="dropdown ">
+            <a class="dropdown-toggle" data-hover="dropdown" data-delay="100"
+               data-close-others="false" role="button" aria-haspopup="true" aria-expanded="false">摄协入口</a>
+            <ul class="dropdown-menu ">
+              <li><a href="index.html">
+                <div>PSA</div>
+                <div>美国摄影协会</div>
+              </a></li>
+              <li><a href="index.html">
+                <div>GPU</div>
+                <div>国际摄影家联盟</div>
+              </a></li>
+              <li><a href="index.html">
+                <div>RUS</div>
+                <div>&nbsp;</div>
+              </a></li>
+            </ul>
+          </li>
+          <li class="phone"><a href="tel:400-112-3535"><img src="font/phone.svg" class="icon-phone">400-112-3535</a>
+          </li>
+          <li class="login"><a href="index.html"><span class="fa fa-user-o"></span>登陆 / 注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="section register">
+  <div class="container-fluid">
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="images/register/banner.png">
+        </div>
+      </div>
+      <div class="row register-content">
+        <div class="col-md-12">
+          <div class="register-title">用户注册</div>
+          <div class="register-subtitle">
+            <p>欢迎成为我们新的合作伙伴，为了方便向您提供专业化的服务，请在下面的表格中按照提示如实填写相关信息。</p>
+            <p>我们会依照您提供的通讯方式尽快与您取得联系，核实信息后激活相关账号功能。</p>
+          </div>
+        </div>
+        <div class="col-md-12 input-content">
+          <div class="input-subtitle">账户信息</div>
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="input-email" class="col-xs-1 control-label">*邮件地址</label>
+              <div class="col-xs-3">
+                <input type="email" class="form-control" id="input-email"
+                       placeholder="将作为用户登陆用户名，系统会验证真实性">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="input-phone" class="col-xs-1 control-label">*手机号码</label>
+              <div class="col-xs-2">
+                <input type="number" class="form-control" id="input-phone" placeholder="手机号码">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="input-phone" class="col-xs-1 control-label">*验证码</label>
+              <div class="col-xs-1">
+                <input type="number" class="form-control" id="input-vcode" placeholder="验证码">
+              </div>
+              <div class="col-xs-1">
+                <div class="btn btn-primary btn-get-vCode">获取验证码</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="input-password" class="col-xs-1 control-label">*密码</label>
+              <div class="col-xs-2">
+                <input type="password" class="form-control" id="input-password" placeholder="密码">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="input-password-again" class="col-xs-1 control-label">*验证密码</label>
+              <div class="col-xs-2">
+                <input type="password" class="form-control" id="input-password-again"
+                       placeholder="验证密码">
+              </div>
+            </div>
+            <div class="input-subtitle">用户身份信息(重要)</div>
+            <div class="form-group">
+              <label for="surname" class="col-xs-1 control-label">*姓</label>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="surname" placeholder="张">
+              </div>
+              <label for="surname-en" class="col-xs-1 control-label">*全拼/英文&nbsp;&nbsp;姓</label>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="surname-en" placeholder="zhang">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name" class="col-xs-1 control-label">*名</label>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="name" placeholder="三">
+              </div>
+              <label for="name-en" class="col-xs-1 control-label">*全拼/英文&nbsp;&nbsp;名</label>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="name-en" placeholder="san">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mid-name" class="col-xs-1 control-label">中间名</label>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="mid-name" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nationality" class="col-xs-1 control-label">用户国籍</label>
+              <div class="col-xs-2">
+                <select class="form-control" id="nationality">
+                  <option>中国大陆</option>
+                  <option>中国台湾</option>
+                  <option>中国香港</option>
+                  <option>中国澳门</option>
+                  <option id="btn-abroad">海外请填写</option>
+                </select>
+              </div>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="abroad" placeholder="海外请填写">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="provinces" class="col-xs-1 control-label">省份</label>
+              <div class="provinces" id="provinces">
+                <div class="col-xs-2">
+                  <select id="prov" class="form-control prov"></select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="citys" class="col-xs-1 control-label">城市</label>
+              <div class="provinces" id="citys">
+                <div class="col-xs-2">
+                  <select id="city" class="form-control city"></select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address" class="col-xs-1 control-label">详细地址</label>
+              <div class="col-xs-4">
+                <input type="text" class="form-control" id="address" placeholder="详细地址">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="postcodes" class="col-xs-1 control-label">邮编</label>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="postcodes" placeholder="100000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">是否加入了参赛团体</label>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-1 padding-left-20">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="individual" value="individual">
+                    个人
+                  </label>
+                </div>
+              </div>
+              <div class="col-xs-1 padding-left-20">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="team" value="team" checked>
+                    团体
+                  </label>
+                </div>
+              </div>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="team-name" placeholder="团体名称">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">是否通过Bestphoto提交PSA(美国摄影协会)的申请</label>
+              <a href="" class="go-details color-orange"><ins>详细信息</ins></a>
+            </div>
+            <div class="form-group padding-left-20">
+              <label>
+                <input type="checkbox" checked> 是的，我想加入PSA
+              </label>
+              <div><span class="color-orange">会费 $49.9 </span>将在提交注册后跳转付费页面</div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12 btns">
+          <div class="btn btn-default col-xs-1 btn-rewrite">重填</div>
+          <div class="btn btn-warning col-xs-1 btn-submit">提交</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/register.js"></script>
+<!-- 省市给默认值 -->
+<script type="text/javascript">
+  $(function () {
+    $(".provinces").citySelect({
+      prov: "北京",
+      city: "东城区"
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+.section .panel-default > .panel-body {
+    padding-top: 0;
+}
+
+.section.register {
+    padding-top: 80px;
+}
+
+.register .col-md-12 {
+    padding: 0;
+}
+
+.register .col-md-12 > img {
+    width: 100%;
+    height: auto;
+}
+.register .register-content {
+    padding-left: 215px;
+}
+.register .register-content {
+    padding-left: 215px;
+}
+.register .register-content .btn-get-vCode {
+    width: 100%;
+}
+.register .register-content .register-title {
+    background: rgba(229, 229, 229, 1);
+    padding-left: 215px;
+    margin-left: -215px;
+    font-size: 20px;
+    line-height: 55px;
+}
+.register .register-content .register-subtitle {
+    margin-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px black dashed;
+}
+.register .input-subtitle {
+    color: #EA5413;
+    margin: 20px 0;
+}
+
+.register .register-content .register-subtitle>p {
+    margin: 0;
+    font-size: 14px;
+}
+.register .register-content .form-horizontal .form-group {
+    margin-left: 0;
+}
+.register .register-content .go-details {
+    padding-left: 50px;
+}
+.register .register-content .btns {
+    padding: 20px 0 20px 100px;
+}
+.register .register-content .btns .btn-rewrite {
+    margin-right: 50px;
+    background: rgba(107, 107, 107, 1);
+    color: #fff;
+}
+.register .register-content .btns .btn-submit {
+    background: rgba(234, 84, 19, 1);
+    color: #fff;
+}
+
+.register .register-content .input-content {
+    border-bottom: 1px black dashed;
+}
+
+@media (max-width: 1200px) {
+    .register .register-content {
+        padding-left: 115px;
+    }
+}
+@media (max-width: 1408px) {
+    .section.register {
+        padding-top: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 685px) {
+}
+
+@media (max-width: 340px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1600px) {
+}
