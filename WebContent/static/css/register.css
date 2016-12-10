@@ -73,6 +73,7 @@
 
 .register .register-content .input-content {
     border-bottom: 1px black dashed;
+    min-width: 1500px;
 }
 
 @media (max-width: 1200px) {
