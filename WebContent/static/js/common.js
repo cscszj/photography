@@ -23,6 +23,9 @@
       auth: {
         login: CSCSZJ.config.server + '/auth/logon',
         register: CSCSZJ.config.server + '/auth/register'
+      },
+      contest: {
+        query: CSCSZJ.config.server + '/user/contest/query'
       }
     };
 

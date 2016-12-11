@@ -97,7 +97,7 @@ $(function () {
       type: 'POST',
       timeout: CSCSZJ.config.timeout,
       success: function (respData, status, jqXhr) {
-        if (respData.rc === 0) {
+        if (respData && respData.rc === 0) {
           account = respData.account;
           alert('OK');
           let photography = {};
@@ -111,6 +111,8 @@ $(function () {
           );
         } else if (respData.rc === 10402) {
           alert('邮箱已被注册');
+        } else {
+          alert('网络异常');
         }
       },
       error: function (respData, statusCities, jqXhrCities) {

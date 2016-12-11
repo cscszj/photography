@@ -26,7 +26,7 @@ $(function () {
       type: 'POST',
       timeout: CSCSZJ.config.timeout,
       success: function(respData, status, jqXhr) {
-        if(respData.rc === 0) {
+        if(respData && respData.rc === 0) {
           let account, password;
           account = $('#account').val();
           password = $('#password').val();

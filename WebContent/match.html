@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <title>详细信息</title>
+  <title>赛事浏览</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
@@ -94,24 +94,28 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12" id="lists">
+
+      </div>
+      <script id="tpl-list" type="text/html">
+        <%for(var i = 0; i < list.length; i++) {%>
         <div class="match-block">
-          <div class="match-state">比赛中</div>
+          <div class="match-state"><%:=list[i].status%></div>
           <div class="match-block-left">
-            <img src="images/bg.jpg">
+            <img src="<%:=list[i].pic%>">
           </div>
           <div class="match-block-right">
-            <div class="match-title">全球摄影网首届“中国夜市”主题摄影大赛征稿启事</div>
+            <div class="match-title"><%:=list[i].name%></div>
             <div class="match-subtitle">
-              <span class="match-bonus">最高奖励20000元人民币</span>
-              <span class="match-submit-time">投稿日期：2016-08-26 至 2016-12-26</span>
-              <span class="match-remaining-time">剩余<span class="color-red">34</span>天</span>
+              <span class="match-bonus"><%:=list[i].awarddesc%></span>
+              <span class="match-submit-time">投稿日期：<%:=list[i].enrollstarttime%> 至 <%:=list[i].enrollendtime%></span>
+              <span class="match-remaining-time">剩余<span class="color-red"><%:=list[i].surplusdays%></span>天</span>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-danger" style="width: 50%;min-width: 5px;"></div>
+              <div class="progress-bar progress-bar-danger" style="width: 0;min-width: 1px;"></div>
             </div>
-            <div>主办单位：全球摄影网</div>
-            <p>官网网址：全球摄影网（http://www.baidu.com）</p>
+            <div>主办单位：<%:=list[i].organizers%></div>
+            <p>官网网址：<%:=list[i].originwebsite%></p>
             <div class="match-time">征稿时间：2016年8月26日0时至2016年12月26日24时（北京时间）</div>
             <div class="text-right">
               <div class="btn btn-primary">赛事详情</div>
@@ -120,12 +124,16 @@
             </div>
           </div>
         </div>
-      </div>
+        <%}%>
+      </script>
     </div>
   </div>
+
 </div>
 
+<script src="/bower_components/template.js/template.js"></script>
 <script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/match.js"></script>
 
 </body>
 </html>
