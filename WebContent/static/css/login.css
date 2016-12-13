@@ -22,7 +22,7 @@
     width: 450px;
     /*height: 45%;*/
     background: #fff;
-    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, .5);
     box-shadow: 1px 1px 20px rgba(0, 0, 0, .5);
 }
 

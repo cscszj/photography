@@ -9,17 +9,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <title>首页</title>
+  <title>参赛报名</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
   <!-- Font-awesome CSS -->
 
   <!-- 自定义CSS -->
-  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
 
   <link href="static/css/common.css" rel="stylesheet"/>
-  <link href="static/css/index.css" rel="stylesheet"/>
+  <link href="static/css/join.css" rel="stylesheet"/>
+
 
   <!-- Jquery Bootstrap -->
   <script type="text/javascript" src="static/jquery/jquery-2.1.4.min.js"></script>
@@ -33,17 +34,6 @@
   <script type="text/javascript" src="static/ie/respond/respond.min.js"></script>
   <![endif]-->
 
-  <script src="static/jquery/jquery.page.js"></script>
-  <style>
-    *{ margin:0; padding:0; list-style:none;}
-    a{ text-decoration:none;}
-    a:hover{ text-decoration:none;}
-    .tcdPageCode{padding: 15px 20px;color: #ccc;text-align:center;}
-    .tcdPageCode a{color: #428bca;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
-    .tcdPageCode a:hover{text-decoration: none;border: 1px solid #428bca;}
-    .tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
-    .tcdPageCode span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
-  </style>
 </head>
 <body>
 
@@ -79,61 +69,80 @@
               </a></li>
             </ul>
           </li>
-          <li class="phone"><a href="tel:400-112-3535"><img src="font/phone.svg" class="icon-phone">400-112-3535</a></li>
-          <li class="login"><a href="login.html" external><span class="fa fa-user-o"></span>登陆 / 注册</a></li>
+          <li class="phone"><a href="tel:400-112-3535"><img src="font/phone.svg" class="icon-phone">400-112-3535</a>
+          </li>
+          <li class="login"><a href="index.html"><span class="fa fa-user-o"></span>登陆 / 注册</a></li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
-<div class="section index">
+<div class="section join">
   <div class="container-fluid">
     <div class="content">
       <div class="row">
-        <!--<div class="col-xs-1">
-          <div class="btn btn-primary">首页</div>
-        </div>
-        <div class="col-xs-1">
-          <div class="btn btn-primary">赛事浏览</div>
-        </div>
-        <div class="col-xs-1">
-          <div class="btn btn-primary">赛事新闻</div>
-        </div>
-        <div class="col-xs-1">
-          <div class="btn btn-primary">我的作品</div>
-        </div>
-        <div class="col-xs-1">
-          <div class="btn btn-primary">我的赛事</div>
-        </div>
-        <div class="col-xs-7 text-right">
-          <div style="line-height: 34px">我已经获得<span>23</span>个奖项</div>
-        </div>-->
         <div class="col-md-12">
-          <img src="images/index/banner.png">
+          <img src="images/join/banner.png">
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="tcdPageCode"></div>
+      <div class="row join-content">
+        <div class="col-xs-12">
+          <div class="join-title">参赛申请</div>
         </div>
-
-        <script>
-          $(".tcdPageCode").createPage({
-            pageCount:99,
-            current:1,
-            backFn:function(p){
-              console.log(p);
-            }
-          });
-        </script>
+        <form class="form-horizontal">
+          <div class="col-xs-12 form-group choose-match">
+            <label for="matches" class="col-xs-1 control-label">选择赛事</label>
+            <div class="col-xs-2">
+              <select class="form-control" id="matches">
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12">请先上传作品和为作品写标题</div>
+          <div class="col-xs-12">
+            <div class="btn btn-primary">从我的作品里选择</div>
+            <div class="btn btn-default"><a>去我的作品上传</a></div>
+          </div>
+          <div class="col-xs-5 choose-content">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active">
+                <a href="#all" data-toggle="tab">
+                  所有照片
+                </a>
+              </li>
+              <li><a href="#unrated" data-toggle="tab">未参赛的照片</a></li>
+              <li><a href="#alternative" data-toggle="tab">标记备选的照片</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="all">
+                <div class="photo-content col-xs-6">
+                  <img src="https://img.alicdn.com/bao/uploaded/i2/925611061/TB2KkqQXUhnpuFjSZFpXXcpuXXa_!!925611061.jpg_430x430q90.jpg">
+                  <div class="photo-desc">
+                    <div class="color-gray">中文标题：</div>
+                    <div class="">极光</div>
+                    <div class="color-gray">英文标题：</div>
+                    <div class="">Aurora</div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">选中这张
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="unrated">2</div>
+              <div class="tab-pane fade" id="alternative">3</div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-
 </div>
 
+<script src="/bower_components/template.js/template.js"></script>
 <script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/join.js"></script>
 
 </body>
 </html>
