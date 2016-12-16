@@ -1,10 +1,10 @@
 'use strict';
 
-(function(global){
-  
-  global.MakeCSCSZJ = function(){
+(function (global) {
 
-    let CSCSZJ = function(){
+  global.MakeCSCSZJ = function () {
+
+    var CSCSZJ = function () {
       return CSCSZJ.get.apply(global, arguments);
     };
 
@@ -24,8 +24,9 @@
         login: CSCSZJ.config.server + '/auth/logon',
         register: CSCSZJ.config.server + '/auth/register'
       },
-      contest: {
-        query: CSCSZJ.config.server + '/user/contest/query'
+      user: {
+        piclist: CSCSZJ.config.server + '/user/piclist/query',
+        contest: CSCSZJ.config.server + '/user/contest/query'
       }
     };
 

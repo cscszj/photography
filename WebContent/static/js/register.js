@@ -1,5 +1,5 @@
 $(function () {
-  let email, phone, pwd, pwdAgain, middlename, firstname, firstnameen, lstname, lstnameen, language, province, city, address, zipcode, isjoinedgroup, groupname, tType;
+  var email, phone, pwd, pwdAgain, middlename, firstname, firstnameen, lstname, lstnameen, language, province, city, address, zipcode, isjoinedgroup, groupname, tType;
   isjoinedgroup = 1;
   // 初始化省市
   $('.provinces').citySelect({
@@ -9,8 +9,8 @@ $(function () {
 
   // 省市与国家联动
   $('#nationality').change(function () {
-    let $prov = $('#prov');
-    let $city = $('#city');
+    var $prov = $('#prov');
+    var $city = $('#city');
     if ($('#nationality').val() === '海外请填写') {
       $('#abroad').removeAttr('disabled');
       $('#abroad')[0].focus();
@@ -71,7 +71,7 @@ $(function () {
       middlename = '';
     }
 
-    let params = {
+    var params = {
       params: {
         email: email,
         phone: phone,
@@ -100,7 +100,7 @@ $(function () {
         if (respData && respData.rc === 0) {
           account = respData.account;
           alert('OK');
-          let photography = {};
+          var photography = {};
           photography.account = account;
           photography.remember = false;
           photography.password = null;

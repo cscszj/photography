@@ -1,6 +1,6 @@
 $(function () {
   function setCookies(account, remember, password) {
-    let photography = {};
+    var photography = {};
     photography.account = account;
     photography.remember = remember;
     photography.password = password;
@@ -13,7 +13,7 @@ $(function () {
   }
 
   function Login(account, password) {
-    let params = {
+    var params = {
       params: {
         account: account,
         pwd: password
@@ -27,7 +27,7 @@ $(function () {
       timeout: CSCSZJ.config.timeout,
       success: function(respData, status, jqXhr) {
         if(respData && respData.rc === 0) {
-          let account, password;
+          var account, password;
           account = $('#account').val();
           password = $('#password').val();
           if($('#remember-password').prop('checked')) {
@@ -44,8 +44,8 @@ $(function () {
   }
 
   function checkInput() {
-    let account = $('#account').val();
-    let password = $('#password').val();
+    var account = $('#account').val();
+    var password = $('#password').val();
     if(account && password) {
       Login(account, password);
     } else if(!account) {
@@ -55,11 +55,11 @@ $(function () {
     }
   }
 
-  let ckCookie = Cookies.get('photography');
+  var ckCookie = Cookies.get('photography');
   photography = (ckCookie !== undefined && ckCookie !== null) ? $.parseJSON(Base64.decode(ckCookie)) : undefined;
   if(photography) {
-    let account = photography.account;
-    let remember = photography.remember;
+    var account = photography.account;
+    var remember = photography.remember;
     $('#account').val(account);
     if(remember && password) {
       $('#remember-password').attr('checked', 'checked');
